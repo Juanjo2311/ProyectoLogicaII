@@ -1,10 +1,13 @@
 
 package Naves;
 
+import Personas.Piloto;
+
 public abstract class Nave {
     protected int capacidad[];
     protected String modelo;
     protected boolean status;
+    protected Piloto pilotos;
 
     public Nave(String modelo,int a1, boolean status) {
         this.capacidad = new int [a1];
