@@ -1,4 +1,4 @@
-package Personas;
+package Modelo.Personas;
 
 public abstract class Persona {
 
@@ -66,8 +66,6 @@ public abstract class Persona {
         this.phone = phone;
     }
     
-    
-
     public String informacionPersona() {
         return "name=" + name
                 + "\nlastName=" + lastName 

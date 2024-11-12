@@ -1,5 +1,5 @@
 
-package Personas;
+package Modelo.Personas;
 
 public class Piloto extends Persona{
     

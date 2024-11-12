@@ -1,5 +1,5 @@
 
-package Personas;
+package Modelo.Personas;
 
 
 public class Pasajero extends Persona{
@@ -8,5 +8,8 @@ public class Pasajero extends Persona{
         super(name, lastName, age, sex, id, phone);
     }
     
+    public boolean reserva(){
+        return false;
+    }
     
 }
