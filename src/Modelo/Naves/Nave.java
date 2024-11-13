@@ -1,27 +1,20 @@
 
 package Modelo.Naves;
 
+import Modelo.Personas.Persona;
 import Modelo.Personas.Piloto;
 
 public abstract class Nave {
-    private int capacidad[];
-    private String modelo;
-    private boolean estatus;
-    private Piloto pilotos;
+    public Persona personas[];
+    protected String modelo;
+    protected boolean estatus;
+    protected Piloto piloto;
 
-    public Nave(int capacidad, String modelo, boolean estatus, Piloto pilotos) {
-        this.capacidad = new int [capacidad];
+    public Nave(int capacidad, String modelo, boolean estatus) {
+        this.personas = new Persona [capacidad];
         this.modelo = modelo;
         this.estatus = estatus;
-        this.pilotos = pilotos;
-    }
-
-    public Piloto getPilotos() {
-        return pilotos;
-    }
-
-    public void setPilotos(Piloto pilotos) {
-        this.pilotos = pilotos;
+//        this.piloto = piloto;
     }
 
     public String getModelo() {
@@ -39,6 +32,17 @@ public abstract class Nave {
     public void setEstatus(boolean estatus) {
         this.estatus = estatus;
     }
+
+    public Piloto getPiloto() {
+        return piloto;
+    }
+
+    public void setPiloto(Piloto piloto) {
+        this.piloto = piloto;
+    }
     
+    public abstract int cantidadPasajeros();
+    
+    public abstract boolean puestoDisponible(int puesto);
     
 }
